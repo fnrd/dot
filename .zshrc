@@ -33,9 +33,8 @@ setopt NOCORRECT
 
 alias feh='feh -zZFd'
 alias ls='ls -F --color=never'
+alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
 function fdot() {
   rsync -avz -e ssh $1 fsync:dot/$2
 }
-
-alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'

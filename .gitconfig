@@ -4,7 +4,8 @@
   smudge = git media smudge %f
 
 [user]
-  name = fnrd
+  name = agg
+  email = agg@fnord.ch
 
 [rebase]
   autoStash = true

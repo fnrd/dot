@@ -1,1 +1,2 @@
---write-subs --audio-multistreams --sub-langs "all" -f "bv*+mergeall" -S "res:1080" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s
+--write-subs --audio-multistreams --sub-langs "all" -f
+"bestvideo*+mergeall/best" -S "res:1080,fps" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s

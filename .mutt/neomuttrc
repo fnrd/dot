@@ -1,0 +1,64 @@
+set imap_user = agg@fnord.ch
+set imap_pass = ywgabjzsdnwcxfab
+
+set imap_keepalive = 300
+set mail_check= 90
+# set timeout= 15
+
+set ssl_force_tls
+set ssl_starttls
+set ssl_use_tlsv1_2
+set ssl_verify_dates
+set ssl_verify_host
+set certificate_file=~/.mutt/gmailcerts
+
+unset imap_passive
+unset ssl_use_sslv2
+unset ssl_use_sslv3
+unset ssl_use_tlsv1
+unset ssl_use_tlsv1_1
+unset ssl_usesystemcerts
+
+set from = agg@fnord.ch
+set realname = "alexander glinz"
+set folder = imaps://imap.gmail.com
+set spoolfile = +Inbox
+# set record = "+Sent Items"
+# set postponed = "+Drafts"
+# set trash = "+Trash"
+set imap_check_subscribed
+set header_cache = ~/.mutt/headers
+set mailcap_path = ~/.mutt/mailcap
+set sort = threads
+set sort_aux = last-date-received
+set send_charset = utf-8
+set wrap = 79
+set hidden_host
+set include
+set alias_file = ~/.mutt/aliases
+set sort_alias= alias
+set reverse_alias
+set text_flowed
+
+unset markers
+
+bind pager,index,attach g noop
+bind pager,index d noop
+bind index,pager R group-reply
+bind index D delete-message
+bind pager j next-line
+bind pager k previous-line
+bind pager gg top
+bind pager G bottom
+bind attach,index gg first-entry
+bind attach,index G last-entry
+bind index / search-reverse
+bind index N search-opposite
+bind index \cn toggle-new
+
+macro index,pager dd "<delete-message><sync-mailbox>"
+
+color normal default default
+
+source ~/.mutt/gpg.rc
+source ~/.mutt/aliases

@@ -29,7 +29,8 @@ set spoolfile = +Inbox
 set imap_check_subscribed
 set header_cache = ~/.mutt/headers
 set mailcap_path = ~/.mutt/mailcap
-set sort = threads
+set sort_re
+set sort = reverse-threads
 set sort_aux = last-date-received
 set send_charset = utf-8
 set wrap = 79

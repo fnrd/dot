@@ -1,5 +1,4 @@
-set imap_user = agg@fnord.ch
-set imap_pass = ywgabjzsdnwcxfab
+source ~/.mutt/imap
 
 set imap_keepalive = 300
 set mail_check= 90
@@ -18,6 +17,8 @@ unset ssl_use_sslv3
 unset ssl_use_tlsv1
 unset ssl_use_tlsv1_1
 unset ssl_usesystemcerts
+unset help
+unset markers
 
 set from = agg@fnord.ch
 set realname = "alexander glinz"
@@ -40,8 +41,6 @@ set alias_file = ~/.mutt/aliases
 set sort_alias= alias
 set reverse_alias
 set text_flowed
-
-unset markers
 
 bind pager,index,attach g noop
 bind pager,index d noop

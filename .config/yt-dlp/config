@@ -1,2 +1,2 @@
 --write-subs --audio-multistreams --sub-langs "all" -f
-"(bv*+mergeall/b)[protocol^=http][protocol!*=dash] / (bv*+mergeall/b)" -S "res:1080,fps" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s
+"bv*+ba[vcodec=none]+ba[vcodec=none]+ba[vcodec=none]/ (bv*+ba)" -S "res:1080,fps" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s

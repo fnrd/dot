@@ -38,6 +38,7 @@ set nowritebackup
 set noerrorbells
 set visualbell t_vb=
 set mouse=a
+set scrolloff=4
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -55,9 +56,21 @@ au Filetype text setlocal spl=en_gb,de_ch,fr,es fo+=awq tw=72
 au Filetype mail setlocal spl=en_gb,de_ch,fr,es com=n:> fo+=awq tw=72
 au Filetype go setlocal nolist
 
+hi clear SpellBad
+hi clear SpellCap
+hi clear SpellRare
+hi clear SpellLocal
+
+hi SpellBad cterm=underline,bold gui=undercurl,bold
+hi SpellCap cterm=underline,bold gui=undercurl,bold
+hi SpellRare cterm=underline,bold gui=undercurl,bold
+hi SpellLocal cterm=underline,bold gui=undercurl,bold
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
+
+let g:rustfmt_autosave = 1
 
 let g:tex_flavor='latex'
 let g:vimtex_view_method = 'skim'

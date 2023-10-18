@@ -28,6 +28,7 @@ set showmatch
 set autochdir
 set autowrite
 set shortmess+=I
+set scrolloff=4
 
 set nobackup
 set autoread
@@ -37,13 +38,17 @@ set noswapfile
 set nowritebackup
 set noerrorbells
 set visualbell t_vb=
+set nowildmenu
 " set mouse=a
-set scrolloff=4
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 set list listchars=tab:‣\ ,trail:•
 
@@ -61,10 +66,10 @@ hi clear SpellCap
 hi clear SpellRare
 hi clear SpellLocal
 
-hi SpellBad cterm=underline gui=underline
-hi SpellCap cterm=underline gui=underline
-hi SpellRare cterm=underline gui=underline
-hi SpellLocal cterm=underline gui=underline
+hi SpellBad cterm=underline gui=undercurl
+hi SpellCap cterm=underline gui=undercurl
+hi SpellRare cterm=underline gui=undercurl
+hi SpellLocal cterm=underline gui=undercurl
 hi MatchParen cterm=bold gui=bold
 
 let g:syntastic_always_populate_loc_list = 1

@@ -66,10 +66,10 @@ hi clear SpellCap
 hi clear SpellRare
 hi clear SpellLocal
 
-hi SpellBad cterm=underline gui=undercurl
-hi SpellCap cterm=underline gui=undercurl
-hi SpellRare cterm=underline gui=undercurl
-hi SpellLocal cterm=underline gui=undercurl
+hi SpellBad cterm=underline gui=undercurl guisp=red
+hi SpellCap cterm=underline gui=undercurl guisp=red
+hi SpellRare cterm=underline gui=undercurl guisp=red
+hi SpellLocal cterm=underline gui=undercurl guisp=red
 hi MatchParen cterm=bold gui=bold
 
 let g:syntastic_always_populate_loc_list = 1

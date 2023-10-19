@@ -2,13 +2,11 @@ set nocompatible
 filetype off
 call plug#begin()
   Plug 'lifepillar/vim-solarized8'
-  Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'
-  Plug 'lervag/vimtex'
 call plug#end()
 filetype plugin indent on
 
@@ -72,13 +70,4 @@ hi SpellRare cterm=underline gui=undercurl guisp=red
 hi SpellLocal cterm=underline gui=undercurl guisp=red
 hi MatchParen cterm=bold gui=bold
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-
 let g:rustfmt_autosave = 1
-
-let g:tex_flavor='latex'
-let g:vimtex_view_method = 'skim'
-let g:vimtex_view_skim_sync = 1
-let g:vimtex_view_skim_activate = 1

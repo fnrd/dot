@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 call plug#begin()
-  Plug 'lifepillar/vim-solarized8'
+  Plug 'yorickpeterse/vim-paper'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
@@ -10,9 +10,9 @@ call plug#begin()
 call plug#end()
 filetype plugin indent on
 
-syntax off
+syntax on
 set termguicolors
-colorscheme solarized8
+colorscheme paper
 set background=light
 
 set number
@@ -37,15 +37,14 @@ set nowritebackup
 set noerrorbells
 set visualbell t_vb=
 set nowildmenu
-" set mouse=a
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <Tab>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 set list listchars=tab:‣\ ,trail:•
 

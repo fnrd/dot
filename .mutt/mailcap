@@ -4,8 +4,6 @@ nametemplate=%s.html
 
 application/pdf; \
 open '%s'; \
-copiousoutput
 
 image/*; \
 open '%s'; \
-copiousoutput

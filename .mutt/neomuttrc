@@ -11,22 +11,25 @@ set ssl_verify_dates
 set ssl_verify_host
 set certificate_file=~/.mutt/gmailcerts
 
-unset imap_passive
 unset ssl_use_sslv2
 unset ssl_use_sslv3
 unset ssl_use_tlsv1
 unset ssl_use_tlsv1_1
 unset ssl_usesystemcerts
+
+unset imap_passive
 unset help
+unset record
 unset markers
 
 set from = agg@fnord.ch
 set realname = "alexander glinz"
 set folder = imaps://imap.gmail.com
+# set sendmail = "/usr/sbin/sendmail -oem -oi"
 set spoolfile = +Inbox
-# set record = "+Sent Items"
-# set postponed = "+Drafts"
-# set trash = "+Trash"
+# set record = "+[Gmail]/Sent Mail"
+set postponed = "+Drafts"
+set trash = "+Trash"
 set imap_check_subscribed
 set header_cache = ~/.mutt/headers
 set mailcap_path = ~/.mutt/mailcap
@@ -41,6 +44,7 @@ set alias_file = ~/.mutt/aliases
 set sort_alias= alias
 set reverse_alias
 set text_flowed
+set abort_key = "<Esc>"
 
 bind pager,index,attach g noop
 bind pager,index d noop
@@ -52,13 +56,13 @@ bind pager gg top
 bind pager G bottom
 bind attach,index gg first-entry
 bind attach,index G last-entry
-bind index / search-reverse
 bind index N search-opposite
 bind index \cn toggle-new
 
 macro index,pager dd "<delete-message><sync-mailbox>"
 
-color normal default default
+# color normal default default
 
 source ~/.mutt/gpg.rc
 source ~/.mutt/aliases
+source ~/.mutt/hooks

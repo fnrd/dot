@@ -3,7 +3,7 @@ open '%s'; \
 nametemplate=%s.html
 
 application/pdf; \
-open '%s'; \
+open '%s';
 
 image/*; \
-open '%s'; \
+open '%s';

@@ -32,7 +32,7 @@ setopt NOCORRECT
 setopt MENU_COMPLETE
 
 alias feh='feh -zZFd'
-alias ls='ls -F --color=never'
+alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 

@@ -29,7 +29,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 setopt NOCORRECT
-setopt MENU_COMPLETE
 
 alias feh='feh -zZFd'
 alias ls='ls -F --color=always'

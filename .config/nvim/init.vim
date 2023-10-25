@@ -5,6 +5,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-obsession'
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'
 call plug#end()
@@ -54,8 +55,8 @@ set statusline+=%h%m%r%y[%n]
 set statusline+=%=%c,%l/%L
 set laststatus=2
 
-au Filetype text setlocal spl=en_gb,de_ch,fr,es fo+=awq tw=72
-au Filetype mail setlocal spl=en_gb,de_ch,fr,es com=n:> fo+=awq tw=72
-au Filetype go setlocal nolist
+au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72
+au Filetype mail setl spl=en_gb,de_ch,fr,es com=n:> fo+=awq tw=72
+au Filetype go setl nolist
 
 let g:rustfmt_autosave = 1

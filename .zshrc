@@ -15,7 +15,6 @@ export EDITOR=nvim
 export VISUAL=nvim
 export KEYTIMEOUT=1
 
-export HISTCONTROL=ignoredups
 export GREP_OPTIONS='--color=always'
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -30,9 +29,11 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 setopt NOCORRECT
+setopt MENU_COMPLETE
 
 alias feh='feh -zZFd'
 alias ls='ls -F --color=never'
+alias vim='nvim'
 alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
 function fdot() {

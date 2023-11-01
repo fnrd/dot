@@ -1,0 +1,1 @@
+send-hook '~t .*@velokurierbern\\.ch' 'my_hdr From: alexander <gg@fnord.ch>'

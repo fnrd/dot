@@ -1,0 +1,9 @@
+text/html; \
+open '%s'; \
+nametemplate=%s.html
+
+application/pdf; \
+open '%s';
+
+image/*; \
+open '%s';

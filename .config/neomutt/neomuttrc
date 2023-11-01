@@ -9,7 +9,7 @@ set ssl_starttls
 set ssl_use_tlsv1_2
 set ssl_verify_dates
 set ssl_verify_host
-set certificate_file=~/.mutt/gmailcerts
+set certificate_file=gmailcerts
 
 unset ssl_use_sslv2
 unset ssl_use_sslv3
@@ -35,8 +35,8 @@ set spoolfile = +Inbox
 # set record = "+[Gmail]/Sent Mail"
 set postponed = "+Drafts"
 set trash = "+Trash"
-set header_cache = ~/.mutt/headers
-set mailcap_path = ~/.mutt/mailcap
+set header_cache = headers
+set mailcap_path = mailcap
 set sort_re
 set sort = reverse-threads
 set sort_aux = last-date-received
@@ -44,7 +44,7 @@ set send_charset = utf-8
 set wrap = 79
 set hidden_host
 set include
-set alias_file = ~/.mutt/aliases
+set alias_file = aliases
 set sort_alias= alias
 set reverse_alias
 set text_flowed

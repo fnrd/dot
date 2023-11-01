@@ -36,7 +36,6 @@ set spoolfile = +Inbox
 set postponed = "+Drafts"
 set trash = "+Trash"
 set header_cache = headers
-set mailcap_path = mailcap
 set sort_re
 set sort = reverse-threads
 set sort_aux = last-date-received

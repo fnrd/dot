@@ -17,10 +17,15 @@ unset ssl_use_tlsv1
 unset ssl_use_tlsv1_1
 unset ssl_usesystemcerts
 
-unset imap_passive
 unset help
-unset record
+unset mbox
+unset imap_passive
 unset markers
+unset record
+
+set imap_check_subscribed
+set imap_qresync
+set imap_peek
 
 set from = agg@fnord.ch
 set realname = "alexander glinz"
@@ -30,7 +35,6 @@ set spoolfile = +Inbox
 # set record = "+[Gmail]/Sent Mail"
 set postponed = "+Drafts"
 set trash = "+Trash"
-set imap_check_subscribed
 set header_cache = ~/.mutt/headers
 set mailcap_path = ~/.mutt/mailcap
 set sort_re
@@ -48,6 +52,8 @@ set abort_key = "<Esc>"
 
 bind pager,index,attach g noop
 bind pager,index d noop
+bind index,pager V  noop
+
 bind index,pager R group-reply
 bind index D delete-message
 bind pager j next-line
@@ -58,7 +64,6 @@ bind attach,index gg first-entry
 bind attach,index G last-entry
 bind index N search-opposite
 bind index \cn toggle-new
-bind index,pager V  noop
 
 macro index,pager dd "<delete-message><sync-mailbox>"
 macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"

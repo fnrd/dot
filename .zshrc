@@ -14,6 +14,7 @@ bindkey -v
 export EDITOR=nvim
 export VISUAL=nvim
 export KEYTIMEOUT=1
+export HISTSIZE=300
 
 export GREP_OPTIONS='--color=always'
 export ARCHFLAGS="-arch x86_64"

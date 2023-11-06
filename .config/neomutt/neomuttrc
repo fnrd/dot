@@ -19,12 +19,13 @@ unset ssl_usesystemcerts
 
 unset help
 unset mbox
-# unset imap_passive
 unset markers
 unset record
+unset imap_passive
+unset imap_peek
 
 set imap_check_subscribed
-
+set imap_qresync
 set from = agg@fnord.ch
 set realname = "alexander glinz"
 set folder = imaps://imap.gmail.com

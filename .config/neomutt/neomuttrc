@@ -52,6 +52,7 @@ bind pager,index,attach g noop
 bind pager,index d noop
 bind index,pager V  noop
 
+bind index S imap-fetch-mail
 bind index,pager R group-reply
 bind index D delete-message
 bind pager j next-line

@@ -1,2 +1,2 @@
 --write-subs --audio-multistreams --sub-langs "all" -f
-"bv*+mergeall/(bv*+ba)" -S "res:1080,fps" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s
+"bv*+ba.1+ba.2+ba.3+ba.4/b" -S "res:1080,fps" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s

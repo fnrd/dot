@@ -15,7 +15,6 @@ export EDITOR=nvim
 export VISUAL=nvim
 export KEYTIMEOUT=1
 export HISTSIZE=300
-
 export GREP_OPTIONS='--color=always'
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -25,6 +24,8 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 export HOMEBREW_NO_EMOJI=1
 export HOMEBREW_NO_ENV_HINTS=1
 export PYTHONDONTWRITEBYTECODE=1
+export HISTORY_IGNORE="yt-dlp*"
+
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS

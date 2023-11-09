@@ -1,2 +1,2 @@
 --write-subs --audio-multistreams --sub-langs "all" -f
-bv*+ba*.1+ba*.2/bv*+ba* -S "res:1080,lang:(en|de|fr|sp)" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s
+bv*+ba.1+ba.2/b -S "res:1080,lang:en,lang:de,lang:fr,lang:sp" -o ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s

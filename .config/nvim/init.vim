@@ -19,7 +19,7 @@ set background=light
 set number
 set tabstop=2
 set shiftwidth=2
-set expandtab "to spaces
+set expandtab
 set textwidth=79
 set encoding=utf-8
 set hidden
@@ -38,6 +38,7 @@ set nowritebackup
 set noerrorbells
 set visualbell t_vb=
 set nowildmenu
+map q <Nop>
 
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -56,7 +57,7 @@ set statusline+=%=%c,%l/%L
 set laststatus=2
 
 au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72
-au Filetype mail setl spl=en_gb,de_ch,fr,es com=n:> fo+=awq tw=72
+au Filetype mail setl spl=en_gb,de_ch,fr,es com+=nb:> fo+=awq tw=72
 au Filetype go setl nolist
 
 let g:rustfmt_autosave = 1

@@ -31,9 +31,9 @@ set realname = "alexander glinz"
 set folder = imaps://imap.gmail.com
 # set sendmail = "/usr/sbin/sendmail -oem -oi"
 set spoolfile = +Inbox
-# set record = "+[Gmail]/Sent Mail"
-set postponed = "+Drafts"
-set trash = "+Trash"
+# set record  = "+[Gmail]/Sent Mail"
+set postponed  = "+[Gmail]/Drafts"
+set trash  = "+[Gmail]/Trash"
 set header_cache = headers
 set sort_re
 set sort = reverse-threads
@@ -47,12 +47,13 @@ set sort_alias= alias
 set reverse_alias
 set text_flowed
 set abort_key = "<Esc>"
+set crypt_use_gpgme
 
 bind pager,index,attach g noop
 bind pager,index d noop
 bind index,pager V  noop
 
-bind index S imap-fetch-mail
+bind index,pager S imap-fetch-mail
 bind index,pager R group-reply
 bind index D delete-message
 bind pager j next-line

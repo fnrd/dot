@@ -24,16 +24,19 @@ unset record
 unset imap_passive
 unset imap_peek
 
-set imap_check_subscribed
-set imap_qresync
 set from = agg@fnord.ch
 set realname = "alexander glinz"
 set folder = imaps://imap.gmail.com
 # set sendmail = "/usr/sbin/sendmail -oem -oi"
 set spoolfile = +Inbox
-# set record  = "+[Gmail]/Sent Mail"
+set record  = "+[Gmail]/Sent Mail"
 set postponed  = "+[Gmail]/Drafts"
 set trash  = "+[Gmail]/Trash"
+
+mailboxes = +[Gmail]/Starred
+
+set imap_check_subscribed
+set imap_qresync
 set header_cache = headers
 set sort_re
 set sort = reverse-threads
@@ -53,7 +56,7 @@ bind pager,index,attach g noop
 bind pager,index d noop
 bind index,pager V  noop
 
-bind index,pager S imap-fetch-mail
+# bind index,pager S imap-fetch-mail
 bind index,pager R group-reply
 bind index D delete-message
 bind pager j next-line

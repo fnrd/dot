@@ -6,6 +6,7 @@ call plug#begin()
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-obsession'
+  Plug 'tpope/vim-repeat'
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'
 call plug#end()
@@ -28,6 +29,7 @@ set autochdir
 set autowrite
 set shortmess+=I
 set scrolloff=4
+set wildignorecase
 
 set nobackup
 set autoread
@@ -40,10 +42,12 @@ set visualbell t_vb=
 set nowildmenu
 map q <Nop>
 
-vmap <C-c> "+yi
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <ESC>"+pa
+set clipboard+=unnamedplus
+
+" vmap <C-c> "+yi
+" vmap <C-x> "+c
+" vmap <C-v> c<ESC>"+p
+" imap <C-v> <ESC>"+pa
 
 inoremap <silent><expr> <Tab>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-TAB>"

@@ -4,6 +4,7 @@ fi
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 

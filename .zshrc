@@ -14,6 +14,7 @@ export LC_ALL=en_US.UTF-8
 bindkey -v
 export EDITOR=nvim
 export VISUAL=nvim
+export SUDO_EDITOR=/usr/bin/nvim
 export KEYTIMEOUT=1
 export HISTSIZE=100
 export SAVEHIST=300

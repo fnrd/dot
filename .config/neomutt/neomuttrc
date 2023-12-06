@@ -21,6 +21,7 @@ unset help
 unset mbox
 unset markers
 unset record
+# gmail
 unset imap_passive
 unset imap_peek
 
@@ -30,6 +31,7 @@ set folder = imaps://imap.gmail.com
 # set sendmail = "/usr/sbin/sendmail -oem -oi"
 set spoolfile = +Inbox
 # set record  = "+[Gmail]/Sent Mail"
+# gmail
 set postponed  = "+[Gmail]/Drafts"
 set trash  = "+[Gmail]/Trash"
 
@@ -45,7 +47,7 @@ set send_charset = utf-8
 set wrap = 79
 set hidden_host
 set include
-set alias_file = aliases
+set alias_file = $Home/.condig/neomutt/aliases
 set sort_alias= alias
 set reverse_alias
 set text_flowed

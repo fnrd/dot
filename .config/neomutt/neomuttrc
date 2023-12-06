@@ -39,7 +39,7 @@ mailboxes = +[Gmail]/Starred
 
 set imap_check_subscribed
 set imap_qresync
-set header_cache = $HOME/.config/neomutt/headercache
+set header_cache = $HOME/.config/neomutt/headers
 set sort_re
 set sort = reverse-threads
 set sort_aux = last-date-received

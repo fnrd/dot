@@ -1,0 +1,1 @@
+/Users/agg/.config/zsh/.zprezto/runcoms/zshrc

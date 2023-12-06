@@ -9,7 +9,7 @@ set ssl_starttls
 set ssl_use_tlsv1_2
 set ssl_verify_dates
 set ssl_verify_host
-set certificate_file = $HOME/.config/neomutt/gmailcerts
+set certificate_file = ~/.config/neomutt/gmailcerts
 
 unset ssl_use_sslv2
 unset ssl_use_sslv3
@@ -39,7 +39,7 @@ mailboxes = +[Gmail]/Starred
 
 set imap_check_subscribed
 set imap_qresync
-set header_cache = $HOME/.config/neomutt/headers
+set header_cache = ~/.config/neomutt/headers
 set sort_re
 set sort = reverse-threads
 set sort_aux = last-date-received
@@ -47,7 +47,7 @@ set send_charset = utf-8
 set wrap = 79
 set hidden_host
 set include
-set alias_file = $Home/.condig/neomutt/aliases
+set alias_file = ~/.condig/neomutt/aliases
 set sort_alias= alias
 set reverse_alias
 set text_flowed

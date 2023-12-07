@@ -175,7 +175,7 @@ git_prompt_status() {
 }
 
 prompt_git_branch() {
-    autoload -Uz vcs_info 
+    autoload -Uz vcs_info
     precmd_vcs_info() { vcs_info }
     precmd_functions+=( precmd_vcs_info )
     setopt prompt_subst
@@ -213,7 +213,7 @@ prompt_purification_setup() {
 
     prompt_git_branch
     RPROMPT='$(prompt_git_info) $(git_prompt_status)'
-    PROMPT=$'%2~ %B>%f%b '
+    PROMPT=$'%2~ >%f%b '
 }
 
 prompt_purification_setup

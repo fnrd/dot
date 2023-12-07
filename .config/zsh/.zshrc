@@ -13,13 +13,6 @@ alias vim='nvim'
 alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
 zmodload zsh/complist
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-
-bindkey '\e[A' history-search-backward
-bindkey '\e[B' history-search-forward
 
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -31,6 +24,9 @@ bindkey -M menuselect '^xi' vi-insert                      # Insert
 bindkey -M menuselect '^xh' accept-and-hold                # Hold
 bindkey -M menuselect '^xn' accept-and-infer-next-history  # Next
 bindkey -M menuselect '^xu' undo                           # Undo
+
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
 
 autoload -Uz surround
 zle -N delete-surround surround
@@ -99,10 +95,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zstyle ':completion:*' keep-prefix true
 
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
-
-# Purification
-# by Matthieu Cneude
-# https://github.com/Phantas0s/purification
 
 # prompt:
 # %F => color dict
@@ -181,7 +173,6 @@ git_prompt_status() {
     echo " [$STATUS]"
   fi
 }
-
 
 prompt_git_branch() {
     autoload -Uz vcs_info 

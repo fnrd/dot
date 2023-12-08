@@ -4,8 +4,8 @@ setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 setopt NOCORRECT
 setopt MENU_COMPLETE
-# setopt AUTO_LIST
-# setopt COMPLETE_IN_WORD
+setopt AUTO_LIST
+setopt COMPLETE_IN_WORD
 
 alias feh='feh -zZFd'
 alias ls='ls -F --color=always'
@@ -168,3 +168,5 @@ for km in viopp visual; do
     bindkey -M $km $c select-bracketed
   done
 done
+
+source $HOME/.zshenv

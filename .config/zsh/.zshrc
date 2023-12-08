@@ -200,7 +200,7 @@ prompt_purification_setup() {
     autoload -Uz add-zsh-hook
     add-zsh-hook precmd prompt_purity_precmd
 
-    ZSH_THEME_GIT_PROMPT_PREFIX=" λ%f:"
+    ZSH_THEME_GIT_PROMPT_PREFIX=" λ:"
     ZSH_THEME_GIT_PROMPT_DIRTY=""
     ZSH_THEME_GIT_PROMPT_CLEAN=""
 
@@ -216,7 +216,7 @@ prompt_purification_setup() {
 
     prompt_git_branch
     RPROMPT='$(prompt_git_info) $(git_prompt_status)'
-    PROMPT=$'%2~ %B>%f%b '
+    PROMPT=$'%2~ %B>%b '
 }
 
 prompt_purification_setup

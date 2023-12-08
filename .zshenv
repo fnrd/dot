@@ -1,3 +1,4 @@
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
@@ -26,4 +27,5 @@ export HOMEBREW_NO_ENV_HINTS=1
 export PYTHONDONTWRITEBYTECODE=1
 export HISTORY_IGNORE="yt-dlp*"
 
+source "$ZDOTDIR/.zshenv"
 source $HOME/.cargo/env

@@ -18,6 +18,8 @@ fdot() {
 
 zmodload zsh/complist
 
+bindkey -M menuselect '^[[Z' reverse-menu-complete
+
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'j' vi-down-line-or-history
@@ -106,9 +108,6 @@ setopt prompt_subst
 # Run vcs_info just before a prompt is displayed (precmd)
 add-zsh-hook precmd vcs_info
 
-# git:
-# %b => current branch
-# %a => current action (rebase/merge)
 # prompt:
 # %F => color dict
 # %f => reset color

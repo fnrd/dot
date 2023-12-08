@@ -12,6 +12,10 @@ alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
+function fdot() {
+  rsync -avz -e ssh $1 fsync:dot/$2
+}
+
 zmodload zsh/complist
 
 bindkey -M menuselect 'h' vi-backward-char
@@ -43,10 +47,6 @@ bindkey -M visual S add-surround
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
-
-function fdot() {
-  rsync -avz -e ssh $1 fsync:dot/$2
-}
 
 fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
 

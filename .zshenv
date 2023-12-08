@@ -3,7 +3,6 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH="$HOME/.cargo/bin:$PATH"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -26,3 +25,5 @@ export HOMEBREW_NO_EMOJI=1
 export HOMEBREW_NO_ENV_HINTS=1
 export PYTHONDONTWRITEBYTECODE=1
 export HISTORY_IGNORE="yt-dlp*"
+
+source $HOME/.cargo/env

@@ -169,4 +169,5 @@ for km in viopp visual; do
   done
 done
 
+# macos
 source $HOME/.zshenv

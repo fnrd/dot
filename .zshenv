@@ -26,4 +26,4 @@ export HOMEBREW_NO_ENV_HINTS=1
 export PYTHONDONTWRITEBYTECODE=1
 export HISTORY_IGNORE="yt-dlp*"
 
-source $HOME/.cargo/env
+source "$HOME/.cargo/env"

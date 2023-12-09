@@ -16,20 +16,22 @@ fdot() {
   rsync -avz -e ssh $1 fsync:dot/$2
 }
 
+fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
+
 zmodload zsh/complist
+autoload -U compinit; compinit
+_comp_options+=(globdots) # With hidden files
 
 bindkey -M menuselect '^[[Z' reverse-menu-complete
-
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
-
 bindkey -M menuselect '^xg' clear-screen
-bindkey -M menuselect '^xi' vi-insert                      # Insert
-bindkey -M menuselect '^xh' accept-and-hold                # Hold
-bindkey -M menuselect '^xn' accept-and-infer-next-history  # Next
-bindkey -M menuselect '^xu' undo                           # Undo
+bindkey -M menuselect '^xi' vi-insert
+bindkey -M menuselect '^xh' accept-and-hold
+bindkey -M menuselect '^xn' accept-and-infer-next-history
+bindkey -M menuselect '^xu' undo
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -49,12 +51,6 @@ bindkey -M visual S add-surround
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
-
-fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
-
-zmodload zsh/complist
-autoload -U compinit; compinit
-_comp_options+=(globdots) # With hidden files
 
 # Define completers
 zstyle ':completion:*' completer _extensions _complete _approximate

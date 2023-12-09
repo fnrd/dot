@@ -169,5 +169,6 @@ for km in viopp visual; do
   done
 done
 
-# macos
-source $HOME/.zshenv
+if [[ $(uname) == 'Darwin' ]]; then
+  source $HOME/.zshenv
+fi

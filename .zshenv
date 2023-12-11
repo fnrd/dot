@@ -20,7 +20,7 @@ export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 export GPG_TTY=$(tty)
 export PYTHONDONTWRITEBYTECODE=1
-export HISTORY_IGNORE="yt-dlp*"
+setopt HIST_IGNORE_SPACE
 
 source "$HOME/.homebrew/env"
 source "$HOME/.cargo/env"

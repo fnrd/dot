@@ -16,10 +16,11 @@ export SUDO_EDITOR=/usr/bin/nvim
 export HISTSIZE=100
 export SAVEHIST=300
 export GREP_OPTIONS='--color=always'
-export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 export GPG_TTY=$(tty)
 export PYTHONDONTWRITEBYTECODE=1
 
-source "$HOME/.homebrew/env"
-source "$HOME/.cargo/env"
+if [[ $(uname) == 'Darwin' ]]; then
+  source "$HOME/.homebrew/env"
+  source "$HOME/.cargo/env"
+fi

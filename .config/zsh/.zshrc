@@ -13,10 +13,6 @@ alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
-fdot() {
-  rsync -avz -e ssh $1 fsync:dot/$2
-}
-
 fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
 
 zmodload zsh/complist
@@ -168,4 +164,7 @@ done
 
 if [[ $(uname) == 'Darwin' ]]; then
   source $HOME/.zshenv
+  fdot() {
+    rsync -avz -e ssh $1 fsync:dot/$2
+  }
 fi

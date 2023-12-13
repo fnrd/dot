@@ -1,4 +1,3 @@
-setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
@@ -8,7 +7,6 @@ setopt MENU_COMPLETE
 setopt AUTO_LIST
 setopt COMPLETE_IN_WORD
 
-alias feh='feh -zZFd'
 alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
@@ -164,7 +162,4 @@ done
 
 if [[ $(uname) == 'Darwin' ]]; then
   source $HOME/.zshenv
-  fdot() {
-    rsync -avz -e ssh $1 fsync:dot/$2
-  }
 fi

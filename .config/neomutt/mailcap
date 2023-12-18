@@ -2,6 +2,9 @@ text/html; \
 open '%s'; \
 nametemplate=%s.html
 
+text/html; \
+w3m -I %{charset} -T text/html; copiousoutput;
+
 application/pdf; \
 open '%s';
 

@@ -53,6 +53,9 @@ set reverse_alias
 set text_flowed
 set abort_key = "<Esc>"
 set crypt_use_gpgme
+set mail_check_stats
+auto_view text/html
+alternative_order text/plain text/enriched text/html
 
 bind pager,index,attach g noop
 bind pager,index d noop

@@ -9,26 +9,28 @@ set ssl_starttls
 set ssl_use_tlsv1_2
 set ssl_verify_dates
 set ssl_verify_host
-set certificate_file = $HOME/.config/neomutt/gmailcerts
+set certificate_file = ~/.config/neomutt/gmailcerts
 
-# unset ssl_use_sslv2
+unset ssl_use_sslv2
 unset ssl_use_sslv3
 unset ssl_use_tlsv1
 unset ssl_use_tlsv1_1
-# unset ssl_usesystemcerts
+unset ssl_usesystemcerts
 
+unset imap_passive
+unset imap_peek
 unset help
 unset mbox
 unset markers
+# gmail
 unset record
-unset imap_passive
-unset imap_peek
 
 set from = agg@fnord.ch
 set realname = "alexander glinz"
 set folder = imaps://imap.gmail.com
 # set sendmail = "/usr/sbin/sendmail -oem -oi"
 set spoolfile = +Inbox
+# gmail
 # set record  = "+[Gmail]/Sent Mail"
 set postponed  = "+[Gmail]/Drafts"
 set trash  = "+[Gmail]/Trash"
@@ -37,7 +39,7 @@ mailboxes = +[Gmail]/Starred
 
 set imap_check_subscribed
 set imap_qresync
-set header_cache = $HOME/.config/neomutt/headercache
+set header_cache = ~/.config/neomutt/headers
 set sort_re
 set sort = reverse-threads
 set sort_aux = last-date-received
@@ -45,7 +47,7 @@ set send_charset = utf-8
 set wrap = 79
 set hidden_host
 set include
-set alias_file = aliases
+set alias_file = ~/.condig/neomutt/aliases
 set sort_alias= alias
 set reverse_alias
 set text_flowed

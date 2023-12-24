@@ -1,41 +1,17 @@
-source imap
-
 set imap_keepalive = 300
 set mail_check= 90
 # set timeout= 15
 
 set ssl_force_tls
 set ssl_starttls
-set ssl_use_tlsv1_2
-set ssl_verify_dates
-set ssl_verify_host
-set certificate_file = ~/.config/neomutt/gmailcerts
-
-unset ssl_use_sslv2
-unset ssl_use_sslv3
-unset ssl_use_tlsv1
-unset ssl_use_tlsv1_1
-unset ssl_usesystemcerts
 
 unset imap_passive
 unset imap_peek
 unset help
-unset mbox
 unset markers
-# gmail
-unset record
 
 set from = agg@fnord.ch
 set realname = "alexander glinz"
-set folder = imaps://imap.gmail.com
-# set sendmail = "/usr/sbin/sendmail -oem -oi"
-set spoolfile = +Inbox
-# gmail
-# set record  = "+[Gmail]/Sent Mail"
-set postponed  = "+[Gmail]/Drafts"
-set trash  = "+[Gmail]/Trash"
-
-mailboxes = +[Gmail]/Starred
 
 set imap_check_subscribed
 set imap_qresync
@@ -78,3 +54,5 @@ macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 source gpg.rc
 source aliases
 source hooks
+source gmail
+# source proton

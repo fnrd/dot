@@ -1,5 +1,8 @@
+# source gmail
+source proton
+
 set imap_keepalive = 300
-set mail_check= 90
+set mail_check= 30
 # set timeout= 15
 
 set ssl_force_tls
@@ -29,6 +32,8 @@ set reverse_alias
 set text_flowed
 set abort_key = "<Esc>"
 set crypt_use_gpgme
+unset envelope_from_address
+set use_envelope_from
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
@@ -54,5 +59,3 @@ macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 source gpg.rc
 source aliases
 source hooks
-source gmail
-# source proton

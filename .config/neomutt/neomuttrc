@@ -12,6 +12,7 @@ unset imap_passive
 unset imap_peek
 unset help
 unset markers
+unset envelope_from_address
 
 set from = agg@fnord.ch
 set realname = "alexander glinz"
@@ -32,7 +33,6 @@ set reverse_alias
 set text_flowed
 set abort_key = "<Esc>"
 set crypt_use_gpgme
-unset envelope_from_address
 set use_envelope_from
 auto_view text/html
 alternative_order text/plain text/enriched text/html

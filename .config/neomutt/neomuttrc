@@ -16,7 +16,6 @@ unset envelope_from_address
 
 set from = agg@fnord.ch
 set realname = "alexander glinz"
-
 set imap_check_subscribed
 set imap_qresync
 set header_cache = ~/.config/neomutt/headers
@@ -34,8 +33,10 @@ set text_flowed
 set abort_key = "<Esc>"
 set crypt_use_gpgme
 set use_envelope_from
+set reverse_name
 auto_view text/html
 alternative_order text/plain text/enriched text/html
+alternates ^gg@fnord.ch$
 
 bind pager,index,attach g noop
 bind pager,index d noop

@@ -40,9 +40,8 @@ alternates ^gg@fnord.ch$
 
 bind pager,index,attach g noop
 bind pager,index d noop
-bind index,pager V  noop
+bind index,pager V noop
 
-bind index,pager S imap-fetch-mail
 bind index,pager R group-reply
 bind index D delete-message
 bind pager j next-line
@@ -56,6 +55,7 @@ bind index \cn toggle-new
 
 macro index,pager dd "<delete-message><sync-mailbox><enter>"
 macro index,pager S "<save-message>+Spam<enter><enter><sync-mailbox><enter>"
+macro index,pager I "<save-message>+Inbox<enter><enter><sync-mailbox><enter>"
 macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 
 source gpg.rc

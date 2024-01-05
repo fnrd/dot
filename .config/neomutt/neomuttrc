@@ -1,5 +1,7 @@
-# source gmail
-source proton
+source ~/.config/neomutt/gmail
+folder-hook $folder 'source ~/.config/neomutt/gmail'
+source ~/.config/neomutt/proton
+folder-hook $folder 'source ~/.config/neomutt/proton'
 
 set imap_keepalive = 300
 set mail_check= 30
@@ -14,6 +16,7 @@ unset help
 unset markers
 
 set from = agg@fnord.ch
+alternates ^gg@fnord.ch$
 set realname = "alexander glinz"
 set imap_check_subscribed
 set imap_qresync
@@ -25,18 +28,18 @@ set send_charset = utf-8
 set wrap = 79
 set hidden_host
 set include
-set alias_file = ~/.condig/neomutt/aliases
+set alias_file = ~/.config/neomutt/aliases
 set sort_alias= alias
 set reverse_alias
 set text_flowed
 set abort_key = "<Esc>"
 set crypt_use_gpgme
 set reverse_name
+set envelope_from
 set include
 set wait_key = no
 auto_view text/html
 alternative_order text/plain text/enriched text/html
-alternates ^gg@fnord.ch$
 
 bind pager,index,attach g noop
 bind pager,index d noop

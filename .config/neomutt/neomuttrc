@@ -1,7 +1,7 @@
-source ~/.config/neomutt/gmail
-folder-hook $folder 'source ~/.config/neomutt/gmail'
 source ~/.config/neomutt/proton
 folder-hook $folder 'source ~/.config/neomutt/proton'
+# source ~/.config/neomutt/gmail
+# folder-hook $folder 'source ~/.config/neomutt/gmail'
 
 set imap_keepalive = 300
 set mail_check= 30
@@ -46,7 +46,6 @@ bind pager,index d noop
 bind index,pager V noop
 
 bind index,pager R group-reply
-bind index D delete-message
 bind pager j next-line
 bind pager k previous-line
 bind pager gg top
@@ -57,6 +56,7 @@ bind index N search-opposite
 bind index \cn toggle-new
 
 macro index,pager dd "<delete-message><sync-mailbox><enter>"
+macro index,pager P "<purge-message><sync-mailbox><enter>"
 macro index,pager S "<save-message>+Spam<enter><enter><sync-mailbox><enter>"
 macro index,pager I "<save-message>+Inbox<enter><enter><sync-mailbox><enter>"
 macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"

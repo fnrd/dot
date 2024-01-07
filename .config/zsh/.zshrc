@@ -111,8 +111,7 @@ add-zsh-hook precmd vcs_info
 
 # add ${vcs_info_msg_0} to the prompt
 RPROMPT='${vcs_info_msg_0_}'
-# PROMPT='%2~ %B%#%b '
-PROMPT='%2~ %B>%b '
+PROMPT='%2~ %B%#%b '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -164,6 +163,7 @@ for km in viopp visual; do
 done
 
 if [[ $(uname) == 'Darwin' ]]; then
+  PROMPT='%2~ %B>%b '
   source $HOME/.zshenv
   fdot() {
     rsync -avz -e ssh $1 fsync:dot/$2

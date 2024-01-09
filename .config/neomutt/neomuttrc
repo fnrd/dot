@@ -5,18 +5,17 @@ folder-hook $folder 'source ~/.config/neomutt/proton'
 
 set imap_keepalive = 300
 set mail_check= 30
-# set timeout= 15
+set timeout= 0
 
 set ssl_force_tls
 set ssl_starttls
 
 unset imap_passive
-unset imap_peek
 unset help
 unset markers
 
 set from = agg@fnord.ch
-alternates ^gg@fnord.ch$
+set reverse_name
 set realname = "alexander glinz"
 set imap_check_subscribed
 set imap_qresync
@@ -30,15 +29,13 @@ set hidden_host
 set include
 set alias_file = ~/.config/neomutt/aliases
 set sort_alias= alias
-set reverse_alias
 set text_flowed
 set abort_key = "<Esc>"
 set crypt_use_gpgme
-set reverse_name
-set envelope_from
 set include
 set wait_key = no
 auto_view text/html
+alternates ^gg@fnord.ch$
 alternative_order text/plain text/enriched text/html
 
 bind pager,index,attach g noop

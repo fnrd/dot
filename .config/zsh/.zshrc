@@ -164,6 +164,9 @@ done
 
 if [[ $(uname) == 'Darwin' ]]; then
   PROMPT='%2~ %B>%b '
+  autoload -U url-quote-magic bracketed-paste-magic
+  zle -N self-insert url-quote-magic
+  zle -N bracketed-paste bracketed-paste-magic
   source $HOME/.zshenv
   fdot() {
     rsync -avz -e ssh $1 fsync:dot/$2

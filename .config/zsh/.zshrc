@@ -122,6 +122,11 @@ zstyle ':vcs_info:*' stagedstr ' +'
 zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
+autoload -U url-quote-magic bracketed-paste-magic
+zle -N self-insert url-quote-magic
+zle -N bracketed-paste bracketed-paste-magic
+
+
 cursor_mode() {
     # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
     cursor_block='\e[2 q'
@@ -164,9 +169,6 @@ done
 
 if [[ $(uname) == 'Darwin' ]]; then
   PROMPT='%2~ %B>%b '
-  autoload -U url-quote-magic bracketed-paste-magic
-  zle -N self-insert url-quote-magic
-  zle -N bracketed-paste bracketed-paste-magic
   source $HOME/.zshenv
   fdot() {
     rsync -avz -e ssh $1 fsync:dot/$2

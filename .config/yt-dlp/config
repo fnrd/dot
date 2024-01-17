@@ -1,4 +1,5 @@
 --hls-use-mpegts --write-subs --audio-multistreams
---sub-langs "all" -f bv*+ba.1+ba.2+ba.3/bv*+ba.1+ba.2/bv*+ba/b -S
+--sub-langs "all" -f
+bv*+ba.1+ba.2+ba.3+ba.4/bv*+ba.1+ba.2/bv*+ba/b -S
 "res:1080,lang:en,lang:de,lang:fr,lang:sp" -o
 ~/Downloads/%(title)s/%(title)s-%(id)s.%(ext)s

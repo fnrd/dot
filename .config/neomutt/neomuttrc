@@ -5,7 +5,7 @@ folder-hook $folder 'source ~/.config/neomutt/proton'
 
 set imap_keepalive = 300
 set mail_check= 30
-set timeout= 0
+# set timeout= 0
 
 set ssl_force_tls
 set ssl_starttls
@@ -40,7 +40,7 @@ alternative_order text/plain text/enriched text/html
 
 bind pager,index,attach g noop
 bind pager,index d noop
-bind index,pager V noop
+bind pager,index p noop
 
 bind index,pager R group-reply
 bind pager j next-line
@@ -53,7 +53,7 @@ bind index N search-opposite
 bind index \cn toggle-new
 
 macro index,pager dd "<delete-message><sync-mailbox><enter>"
-macro index,pager P "<purge-message><sync-mailbox><enter>"
+macro index,pager pp "<purge-message><sync-mailbox><enter>"
 macro index,pager S "<save-message>+Spam<enter><enter><sync-mailbox><enter>"
 macro index,pager I "<save-message>+Inbox<enter><enter><sync-mailbox><enter>"
 macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"

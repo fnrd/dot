@@ -52,9 +52,10 @@ bind attach,index G last-entry
 bind index N search-opposite
 bind index \cn toggle-new
 
-macro index,pager dd "<delete-message><sync-mailbox><enter>"
-macro index,pager pp "<purge-message><sync-mailbox><enter>"
-macro index,pager S "<save-message>+Spam<enter><enter><sync-mailbox><enter>"
+macro index,pager dd "<clear-flag>N<delete-message><sync-mailbox><enter>"
+macro index,pager pp "<clear-flag>N<purge-message><sync-mailbox><enter>"
+macro index,pager S "<clear-flag>N<save-message>+Spam<enter><enter>\
+<sync-mailbox><enter>"
 macro index,pager I "<save-message>+Inbox<enter><enter><sync-mailbox><enter>"
 macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 

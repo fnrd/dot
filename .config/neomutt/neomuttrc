@@ -13,6 +13,7 @@ set ssl_starttls
 unset imap_passive
 unset help
 unset markers
+unset use_domain
 
 set from = agg@fnord.ch
 set reverse_name
@@ -34,6 +35,8 @@ set abort_key = "<Esc>"
 set crypt_use_gpgme
 set include
 set wait_key = no
+set resolve = no # no jump to next mail
+set move = no # no move to all mail
 auto_view text/html
 alternates ^gg@fnord.ch$
 alternative_order text/plain text/enriched text/html
@@ -52,10 +55,10 @@ bind attach,index G last-entry
 bind index N search-opposite
 bind index \cn toggle-new
 
-macro index,pager dd "<clear-flag>N<delete-message><sync-mailbox><enter>"
-macro index,pager pp "<clear-flag>N<purge-message><sync-mailbox><enter>"
-macro index,pager S "<clear-flag>N<save-message>+Spam<enter><enter>\
-<sync-mailbox><enter>"
+macro index,pager dd "<delete-message><clear-flag>N<sync-mailbox><enter>"
+macro index,pager pp "<purge-message><clear-flag>N<sync-mailbox><enter>"
+macro index,pager S "<clear-flag>N<save-message>+Spam<enter>\
+<enter><sync-mailbox><enter>"
 macro index,pager I "<save-message>+Inbox<enter><enter><sync-mailbox><enter>"
 macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 

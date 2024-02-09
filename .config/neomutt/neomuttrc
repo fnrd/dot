@@ -10,7 +10,6 @@ set mail_check= 30
 set ssl_force_tls
 set ssl_starttls
 
-unset imap_passive
 unset help
 unset markers
 unset use_domain
@@ -19,7 +18,6 @@ set from = agg@fnord.ch
 set reverse_name
 set realname = "alexander glinz"
 set imap_check_subscribed
-set imap_qresync
 set header_cache = ~/.config/neomutt/headers
 set sort_re
 set sort = reverse-threads
@@ -27,7 +25,6 @@ set sort_aux = last-date-received
 set send_charset = utf-8
 set wrap = 79
 set hidden_host
-set include
 set alias_file = ~/.config/neomutt/aliases
 set sort_alias= alias
 set text_flowed

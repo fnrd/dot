@@ -8,7 +8,6 @@ setopt MENU_COMPLETE
 setopt AUTO_LIST
 setopt COMPLETE_IN_WORD
 
-alias feh='feh -zZFd'
 alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'

@@ -32,8 +32,7 @@ set abort_key = "<Esc>"
 set crypt_use_gpgme
 set include
 set wait_key = no
-set resolve = no # no jump to next mail
-set move = no # no move to all mail
+set resolve = no
 auto_view text/html
 alternates ^gg@fnord.ch$
 alternative_order text/plain text/enriched text/html

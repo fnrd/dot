@@ -1,6 +1,11 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+if [[ $(uname) == 'Darwin' ]]; then
+  source "$HOME/.homebrew/env"
+  source "$HOME/.cargo/env"
+fi
+
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
@@ -16,11 +21,5 @@ export SUDO_EDITOR=/usr/bin/nvim
 export HISTSIZE=100
 export SAVEHIST=300
 export GREP_OPTIONS='--color=always'
-export SSH_KEY_PATH="~/.ssh/dsa_id"
 export GPG_TTY=$(tty)
 export PYTHONDONTWRITEBYTECODE=1
-
-if [[ $(uname) == 'Darwin' ]]; then
-  source "$HOME/.homebrew/env"
-  source "$HOME/.cargo/env"
-fi

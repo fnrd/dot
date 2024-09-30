@@ -34,7 +34,7 @@ set include
 set wait_key = no
 set resolve = no
 auto_view text/html
-alternates ^gg@fnord.ch$
+# alternates ^agg@fnord.ch$ ^gg@fnord.ch$
 alternative_order text/plain text/enriched text/html
 
 bind pager,index,attach g noop

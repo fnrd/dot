@@ -12,6 +12,10 @@ alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
+# git init --bare $HOME/.dot
+# alias config='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+# config config status.showUntrackedFiles no
+
 fpath=($DOTFILES/zsh/plugins/zsh-completions/src $fpath)
 
 zmodload zsh/complist

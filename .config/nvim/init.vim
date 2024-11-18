@@ -13,7 +13,7 @@ call plug#end()
 filetype plugin indent on
 
 syntax on
-set termguicolors
+" set termguicolors
 colorscheme paper
 set background=light
 

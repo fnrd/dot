@@ -30,6 +30,7 @@ set autowrite
 set shortmess+=I
 set scrolloff=4
 set wildignorecase
+set mouse=a
 
 set nobackup
 set autoread

@@ -12,6 +12,7 @@ alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
+# tracked homefolder configfiles:
 # git init --bare $HOME/.dot
 # alias config='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 # config config status.showUntrackedFiles no
@@ -114,7 +115,7 @@ add-zsh-hook precmd vcs_info
 
 # add ${vcs_info_msg_0} to the prompt
 RPROMPT='${vcs_info_msg_0_}'
-PROMPT='%2~ %B%#%b '
+PROMPT='%n@%m %2~ %B%#%b '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -173,7 +174,4 @@ done
 if [[ $(uname) == 'Darwin' ]]; then
   PROMPT='%2~ %B>%b '
   source $HOME/.zshenv
-  fdot() {
-    rsync -avz -e ssh $1 fsync:dot/$2
-  }
 fi

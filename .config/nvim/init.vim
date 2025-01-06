@@ -9,6 +9,7 @@ call plug#begin()
   Plug 'tpope/vim-repeat'
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'
+  Plug 'lervag/vimtex'
 call plug#end()
 filetype plugin indent on
 

@@ -13,5 +13,8 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 
+[url "git@codeberg.org:"]
+  insteadOf = https://codeberg.org/
+
 [alias]
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short

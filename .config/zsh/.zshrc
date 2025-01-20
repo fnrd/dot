@@ -12,7 +12,7 @@ alias ls='ls -F --color=always'
 alias vim='nvim'
 alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
-# tracked homefolder configfiles:
+### tracked homefolder configfiles:
 # git init --bare $HOME/.dot
 # alias config='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 # config config status.showUntrackedFiles no
@@ -117,6 +117,11 @@ add-zsh-hook precmd vcs_info
 RPROMPT='${vcs_info_msg_0_}'
 PROMPT='%2~ %B%#%b '
 
+# if [[ $(uname) == 'Darwin' ]]; then
+#   # PROMPT='%2~ %B>%b '
+#   source $HOME/.zshenv
+# fi
+
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
 # Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
@@ -132,28 +137,28 @@ zle -N bracketed-paste bracketed-paste-magic
 
 
 cursor_mode() {
-    # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
-    cursor_block='\e[2 q'
-    cursor_beam='\e[6 q'
+  # See https://ttssh2.osdn.jp/manual/4/en/usage/tips/vim.html for cursor shapes
+  cursor_block='\e[2 q'
+  cursor_beam='\e[6 q'
 
-    function zle-keymap-select {
-        if [[ ${KEYMAP} == vicmd ]] ||
-            [[ $1 = 'block' ]]; then
-            echo -ne $cursor_block
-        elif [[ ${KEYMAP} == main ]] ||
-            [[ ${KEYMAP} == viins ]] ||
-            [[ ${KEYMAP} = '' ]] ||
-            [[ $1 = 'beam' ]]; then
-            echo -ne $cursor_beam
-        fi
-    }
+  function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] ||
+      [[ $1 = 'block' ]]; then
+      echo -ne $cursor_block
+    elif [[ ${KEYMAP} == main ]] ||
+      [[ ${KEYMAP} == viins ]] ||
+      [[ ${KEYMAP} = '' ]] ||
+      [[ $1 = 'beam' ]]; then
+      echo -ne $cursor_beam
+    fi
+  }
 
-    zle-line-init() {
-        echo -ne $cursor_beam
-    }
+  zle-line-init() {
+      echo -ne $cursor_beam
+  }
 
-    zle -N zle-keymap-select
-    zle -N zle-line-init
+  zle -N zle-keymap-select
+  zle -N zle-line-init
 }
 
 cursor_mode
@@ -170,8 +175,3 @@ for km in viopp visual; do
     bindkey -M $km $c select-bracketed
   done
 done
-
-if [[ $(uname) == 'Darwin' ]]; then
-  PROMPT='%2~ %B>%b '
-  source $HOME/.zshenv
-fi

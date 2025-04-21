@@ -23,3 +23,5 @@ export SAVEHIST=300
 export GREP_OPTIONS='--color=always'
 export GPG_TTY=$(tty)
 export PYTHONDONTWRITEBYTECODE=1
+
+export DISPLAY=:0

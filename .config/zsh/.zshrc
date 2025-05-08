@@ -1,12 +1,12 @@
-setopt HIST_IGNORE_SPACE
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_REDUCE_BLANKS
-setopt SHARE_HISTORY
-setopt NOCORRECT
-setopt MENU_COMPLETE
-setopt AUTO_LIST
-setopt COMPLETE_IN_WORD
+setopt hist_ignore_space
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt share_history
+setopt nocorrect
+setopt menu_complete
+setopt auto_list
+setopt complete_in_word
 
 alias ls='ls -F --color=always'
 alias vim='nvim'

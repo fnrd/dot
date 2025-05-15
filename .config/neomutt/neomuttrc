@@ -3,8 +3,9 @@ folder-hook $folder 'source ~/.config/neomutt/proton'
 # source ~/.config/neomutt/gmail
 # folder-hook $folder 'source ~/.config/neomutt/gmail'
 
+folder-hook imap 'set read_inc = 1000'
 set imap_keepalive = 300
-set mail_check= 30
+set mail_check = 30
 # set timeout= 0
 
 set ssl_force_tls

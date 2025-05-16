@@ -60,7 +60,7 @@ hi NonText ctermfg=grey guifg=grey
 set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
 set statusline+=%h%m%r%y[%n]%{ObsessionStatus()}
 set statusline+=%=%c,%l/%L
-set laststatus=2
+set laststatus=3
 
 au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72
 au Filetype mail setl spl=en_gb,de_ch,fr,es com+=nb:> fo+=awq tw=72

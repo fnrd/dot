@@ -50,14 +50,11 @@ set clipboard+=unnamedplus
 " vmap <C-v> c<ESC>"+p
 " imap <C-v> <ESC>"+pa
 
-inoremap <silent><expr> <Tab>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-
 set list listchars=tab:‣\ ,trail:•
 hi NonText ctermfg=grey guifg=grey
 
 set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
-set statusline+=%h%m%r%y[%n]%{ObsessionStatus()}
+set statusline+=%h%m%r%y[%n]
 set statusline+=%=%c,%l/%L
 set laststatus=3
 

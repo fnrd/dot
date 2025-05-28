@@ -117,11 +117,6 @@ add-zsh-hook precmd vcs_info
 RPROMPT='${vcs_info_msg_0_}'
 PROMPT='%2~ %B%#%b '
 
-# if [[ $(uname) == 'Darwin' ]]; then
-#   # PROMPT='%2~ %B>%b '
-#   source $HOME/.zshenv
-# fi
-
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
 # Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
@@ -175,3 +170,7 @@ for km in viopp visual; do
     bindkey -M $km $c select-bracketed
   done
 done
+
+if [[ $(uname) == 'Darwin' ]]; then
+  source $HOME/.zshenv
+fi

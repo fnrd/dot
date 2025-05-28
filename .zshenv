@@ -1,13 +1,15 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+path+=('/usr/local/bin')
+path+=('/usr/local/sbin')
+
 if [[ $(uname) == 'Darwin' ]]; then
   source "$HOME/.homebrew/env"
   source "$HOME/.cargo/env"
 fi
 
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+export PATH
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

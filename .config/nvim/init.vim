@@ -5,7 +5,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-obsession'
+  " Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-repeat'
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'

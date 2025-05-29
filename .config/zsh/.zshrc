@@ -171,6 +171,7 @@ for km in viopp visual; do
   done
 done
 
+# macos /etc/profile messes with path which is set in ~/.zshenv
 if [[ $(uname) == 'Darwin' ]]; then
   source $HOME/.zshenv
 fi

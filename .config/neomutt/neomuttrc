@@ -22,6 +22,7 @@ set reverse_name
 set realname = "alexander glinz"
 set imap_check_subscribed
 set header_cache = ~/.config/neomutt/headers
+set message_cachedir = ~/.config/neomutt/bodies
 set sort_re
 set sort = reverse-threads
 set sort_aux = last-date-received

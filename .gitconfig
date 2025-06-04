@@ -7,6 +7,9 @@
   name = agg
   email = agg@fnord.ch
 
+[core]
+    editor = nvim
+
 [rebase]
   autoStash = true
 
@@ -18,3 +21,22 @@
 
 [alias]
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+[diff]
+    tool = nvimdiff
+    guitool = nvimdiff
+
+[merge]
+    tool = nvimdiff
+    conflictstyle = diff3
+
+[mergetool]
+    keepBackup = false
+    trustExitCode = false
+    prompt = true
+
+[difftool]
+    prompt = false
+
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"

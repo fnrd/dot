@@ -44,7 +44,7 @@ vim.opt.list = true
 vim.opt.listchars:append({ tab = '‣ ' , trail = '•' })
 
 vim.cmd([[
-  hi StatusLine guibg=lightgrey
+  hi StatusLine guibg=black guifg=white
 
   set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
   set statusline+=%h%m%r%y[%n]

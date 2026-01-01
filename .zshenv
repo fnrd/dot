@@ -3,6 +3,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 path+=('/usr/local/bin')
 path+=('/usr/local/sbin')
+path+=('~/.local/bin')
 
 if [[ $(uname) == 'Darwin' ]]; then
   source "$HOME/.homebrew/env"

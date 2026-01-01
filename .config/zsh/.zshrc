@@ -175,3 +175,6 @@ done
 if [[ $(uname) == 'Darwin' ]]; then
   source $HOME/.zshenv
 fi
+
+# Created by `pipx` on 2025-07-09 13:22:32
+export PATH="$PATH:/Users/agg/.local/bin"

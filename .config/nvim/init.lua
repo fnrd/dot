@@ -1,7 +1,8 @@
 local vim = vim
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
-  Plug 'yorickpeterse/vim-paper'
+  -- Plug 'yorickpeterse/vim-paper'
+  Plug 'yorickpeterse/nvim-grey'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
@@ -11,8 +12,9 @@ vim.call('plug#begin')
   Plug 'lervag/vimtex'
 vim.call('plug#end')
 
-vim.cmd('silent! colorscheme paper')
-vim.opt.termguicolors = true
+-- vim.cmd('silent! colorscheme paper')
+vim.cmd('silent! colorscheme grey')
+vim.o.termguicolors = false
 
 vim.opt.number = true
 vim.opt.tabstop = 2
@@ -30,7 +32,7 @@ vim.opt.smartcase = true
 vim.opt.mouse = 'a'
 
 vim.opt.backup = false
-vim.opt.autoread = true
+vim.opt.autoread = false
 vim.opt.hlsearch = false
 vim.opt.joinspaces = false
 vim.opt.swapfile = false
@@ -44,16 +46,16 @@ vim.opt.list = true
 vim.opt.listchars:append({ tab = '‣ ' , trail = '•' })
 
 vim.cmd([[
-hi NonText ctermfg=grey guifg=grey
+  hi NonText ctermfg=grey guifg=grey
 
-set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
-set statusline+=%h%m%r%y[%n]
-set statusline+=%=%c,%l/%L
-set laststatus=3
+  set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
+  set statusline+=%h%m%r%y[%n]
+  set statusline+=%=%c,%l/%L
+  set laststatus=3
 
-au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72 nonu
-au Filetype mail setl spl=en_gb,de_ch,fr,es com+=nb:> fo+=awq tw=72
-au Filetype go setl nolist
+  au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72 nonu
+  au Filetype mail setl spl=en_gb,de_ch,fr,es com+=nb:> fo+=awq tw=72
+  au Filetype go setl nolist
 
-let g:rustfmt_autosave = 1
+  let g:rustfmt_autosave = 1
 ]])

@@ -1,25 +1,53 @@
-[colors.bright]
-black = "#555555"
-blue = "#1E6FCC"
-cyan = "#158c86"
-green = "#216609"
-magenta = "#5C21A5"
-red = "#CC3E28"
-white = "#AAAAAA"
-yellow = "#B58900"
+# vim-paper
 
-[colors.normal]
+# [colors.bright]
+# black = "#555555"
+# blue = "#1E6FCC"
+# cyan = "#158c86"
+# green = "#216609"
+# magenta = "#5C21A5"
+# red = "#CC3E28"
+# white = "#AAAAAA"
+# yellow = "#B58900"
+
+# [colors.normal]
+# black = "#000000"
+# blue = "#1E6FCC"
+# cyan = "#158c86"
+# green = "#216609"
+# magenta = "#5C21A5"
+# red = "#CC3E28"
+# white = "#AAAAAA"
+# yellow = "#B58900"
+
+# [colors.primary]
+# background = "#F2EEDE"
+# foreground = "#000000"
+
+# nvim-grey
+
+[colors.bright]
 black = "#000000"
 blue = "#1E6FCC"
 cyan = "#158c86"
 green = "#216609"
+magenta = "#5c21a5"
+red = "#c4331d"
+white = "#ffffff"
+yellow = "#b37f02"
+
+[colors.normal]
+black = "#000000"
+blue = "#1561b8"
+cyan = "#007872"
+green = "#1C5708"
 magenta = "#5C21A5"
-red = "#CC3E28"
-white = "#AAAAAA"
+red = "#c4331d"
+white = "#ffffff"
 yellow = "#B58900"
 
 [colors.primary]
-background = "#F2EEDE"
+background = "#f2f2f2"
 foreground = "#000000"
 
 [font]
@@ -29,7 +57,7 @@ size = 13.0
 style = "Regular"
 # style = "Extended"
 
-family = "iosevka"
+family = "iosevka Term"
 # family = "Go Mono"
 # family = "SF Mono"
 # family = "Fira Code"

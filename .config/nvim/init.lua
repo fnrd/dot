@@ -1,7 +1,6 @@
 local vim = vim
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
-  -- Plug 'yorickpeterse/vim-paper'
   Plug 'yorickpeterse/nvim-grey'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-surround'
@@ -12,9 +11,8 @@ vim.call('plug#begin')
   Plug 'lervag/vimtex'
 vim.call('plug#end')
 
--- vim.cmd('silent! colorscheme paper')
+vim.o.termguicolors = true
 vim.cmd('silent! colorscheme grey')
-vim.o.termguicolors = false
 
 vim.opt.number = true
 vim.opt.tabstop = 2
@@ -46,7 +44,7 @@ vim.opt.list = true
 vim.opt.listchars:append({ tab = '‣ ' , trail = '•' })
 
 vim.cmd([[
-  hi NonText ctermfg=grey guifg=grey
+  hi StatusLine guibg=lightgrey
 
   set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
   set statusline+=%h%m%r%y[%n]
@@ -56,6 +54,4 @@ vim.cmd([[
   au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72 nonu
   au Filetype mail setl spl=en_gb,de_ch,fr,es com+=nb:> fo+=awq tw=72
   au Filetype go setl nolist
-
-  let g:rustfmt_autosave = 1
 ]])

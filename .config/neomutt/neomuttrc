@@ -1,9 +1,9 @@
 source ~/.config/neomutt/proton
 folder-hook $folder 'source ~/.config/neomutt/proton'
+folder-hook . 'set read_inc=1000'
 # source ~/.config/neomutt/gmail
 # folder-hook $folder 'source ~/.config/neomutt/gmail'
 
-folder-hook imap 'set read_inc = 1000'
 set imap_deflate = yes
 set imap_qresync = yes
 set imap_keepalive = 300

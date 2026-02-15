@@ -9,10 +9,11 @@ vim.call('plug#begin')
   Plug 'fatih/vim-go'
   Plug 'rust-lang/rust.vim'
   Plug 'lervag/vimtex'
+  Plug 'Vimjas/vim-python-pep8-indent'
 vim.call('plug#end')
 
 vim.o.termguicolors = true
-vim.cmd('silent! colorscheme grey')
+vim.cmd('colorscheme grey')
 
 vim.opt.number = true
 vim.opt.tabstop = 2
@@ -28,6 +29,7 @@ vim.opt.scrolloff = 4
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.mouse = 'a'
+vim.opt.laststatus = 3
 
 vim.opt.backup = false
 vim.opt.autoread = false
@@ -49,7 +51,6 @@ vim.cmd([[
   set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
   set statusline+=%h%m%r%y[%n]
   set statusline+=%=%c,%l/%L
-  set laststatus=3
 
   au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72 nonu
   au Filetype mail setl spl=en_gb,de_ch,fr,es com+=nb:> fo+=awq tw=72

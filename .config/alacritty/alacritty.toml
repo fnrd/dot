@@ -56,6 +56,7 @@ style = "Regular"
 # style = "Extended"
 
 family = "iosevka Term"
+# family = "iosevka Term Slab"
 # family = "Go Mono"
 # family = "SF Mono"
 # family = "Fira Code"

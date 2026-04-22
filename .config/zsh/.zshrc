@@ -11,6 +11,7 @@ setopt complete_in_word
 alias ls='ls -Fh --color=always'
 alias vim='nvim'
 alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias brew='arch -arm64 brew'
 
 ### tracked homefolder configfiles:
 # git init --bare $HOME/.dot

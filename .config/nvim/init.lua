@@ -48,9 +48,9 @@ vim.opt.listchars:append({ tab = '‣ ' , trail = '•' })
 vim.cmd([[
   hi StatusLine guibg=black guifg=white
 
-  set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
-  set statusline+=%h%m%r%y[%n]
-  set statusline+=%=%c,%l/%L
+"  set statusline+=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]
+"  set statusline+=%h%m%r%y[%n]
+"  set statusline+=%=%c,%l/%L
 
   au Filetype text setl spl=en_gb,de_ch,fr,es fo+=awq tw=72 nonu
   au Filetype mail setl spl=en_gb,de_ch,fr,es com+=nb:> fo+=awq tw=72

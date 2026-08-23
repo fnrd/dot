@@ -169,7 +169,7 @@ hide_when_typing = true
 
 [terminal.shell]
 args = ["-l", "-c", "tmux new -As main"]
-program = "/usr/local/bin/zsh"
+program = "/opt/homebrew/bin/zsh"
 
 [window]
 dynamic_padding = true

@@ -8,7 +8,7 @@ set imap_deflate = yes
 set imap_qresync = yes
 set imap_keepalive = 300
 set mail_check = 30
-# set timeout= 0
+set timeout= 15
 
 set ssl_force_tls
 set ssl_starttls
@@ -21,6 +21,7 @@ set from = agg@fnord.ch
 set reverse_name
 set realname = "alexander glinz"
 set imap_check_subscribed
+set header_cache_backend = "lmdb"
 set header_cache = ~/.config/neomutt/headers
 set message_cachedir = ~/.config/neomutt/bodies
 set sort_re
